@@ -293,7 +293,7 @@ class DonutModelPLModule(pl.LightningModule):
 
         return scores
 
-    def validation_epoch_end(self, validation_step_outputs):
+    def on_validation_epoch_end(self, validation_step_outputs):
         # I set this to 1 manually
         # (previously set to len(self.config.dataset_name_or_paths))
         num_of_loaders = 1
